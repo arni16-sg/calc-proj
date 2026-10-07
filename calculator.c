@@ -9,6 +9,7 @@ int fact(int);
 int main(void)
 {
 	printf("\n%d + %d = %d\n", a, b, add(a, b));
+	printf("Factorial of %d is %d\n", 5, fact(5));
     return 0;
 }
 
@@ -19,8 +20,10 @@ int add(int a, int b);
 
 int fact(int n)
 {
-	//Factorial logic goes here
-	return 0;
+	if (n == 1)
+		return 1;
+	else
+		return n * factorial(n-1);
 }
 
 int sub(int a, int b);
